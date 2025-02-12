@@ -4,6 +4,7 @@
 * {
     scroll-behavior: smooth;
     margin: 0;
+    box-shadow: 0px 0px 0px 1px rgb(60, 255, 0) inset;
 }
 body {
     background-color: #d9a9b6;
@@ -186,12 +187,10 @@ body {
     } */
     position: relative;
     height: 700px;
-    width: 100%;
 
     .about-bg {
         background-image: url("images/about-me-bg.jpg");
         background-size: cover;
-        background-position: 0 -1050px;
         background-repeat: no-repeat;
         position: absolute;
         height: 700px;
@@ -214,7 +213,6 @@ body {
         left: 0;
     }
     .about-me {
-        padding: auto;
         position: relative;
         height: 100%;
         z-index: 1;

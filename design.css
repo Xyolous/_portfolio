@@ -90,18 +90,15 @@ body {
 .hero-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 683px;
-    margin: 0 300px;
     gap: 100px;
-    position: relative;
 
     .hero-left {
+        position: relative;
+
         .hero-picture {
             width: 400px;
-        }
-
-        .sm {
-            position: absolute;
         }
 
         .small-logo {

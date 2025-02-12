@@ -91,7 +91,7 @@ body {
     display: flex;
     align-items: center;
     height: 683px;
-    padding: 0 150px;
+    margin: 0 300px;
     gap: 100px;
     position: relative;
 

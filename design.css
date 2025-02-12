@@ -218,14 +218,14 @@ body {
     .about-me {
         padding: auto;
         position: relative;
-        font-family: "M PLUS Rounded 1c", serif;
-        text-align: center;
-        color: white;
         height: 100%;
         z-index: 1;
     }
     .about-heading {
-        padding: 25px;
+        font-family: "M PLUS Rounded 1c", serif;
+        text-align: center;
         font-size: 70px;
+        color: white;
+        padding: 25px;
     }
 }

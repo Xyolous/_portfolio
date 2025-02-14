@@ -254,6 +254,7 @@ body {
         height: auto;
         width: 30vw;
         padding: 50px;
+        box-shadow: 0 0 5px 1px #f2e8e4;
     }
     .atxt-left {
         animation-name: pan-left;

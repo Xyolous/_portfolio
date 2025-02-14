@@ -91,7 +91,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 683px;
+    height: 91vh;
     gap: 100px;
 
     .hero-left {
@@ -188,7 +188,8 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         position: absolute;
-        height: 700px;
+        height: 91vh;
+
         width: 100%;
     }
 
@@ -202,7 +203,7 @@ body {
     .overlay {
         background-color: hsla(304, 41%, 32%, 0.333);
         position: absolute;
-        height: 700px;
+        height: 91dvh;
         width: 100%;
     }
     .about-me {

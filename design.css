@@ -4,7 +4,7 @@
 * {
     scroll-behavior: smooth;
     margin: 0;
-    /* box-shadow: 0px 0px 0px 1px rgb(60, 255, 0) inset; */
+    box-shadow: 0px 0px 0px 1px rgb(60, 255, 0) inset;
 }
 body {
     background-color: #d9a9b6;
@@ -12,7 +12,6 @@ body {
 
 .header {
     background-color: #402132;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,10 +88,13 @@ body {
 
 .hero-container {
     display: flex;
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
     height: 91vh;
-    gap: 100px;
+
+    * {
+        box-shadow: 0px 0px 0px 1px rgb(60, 255, 0) inset;
+    }
 
     .hero-left {
         position: relative;
@@ -117,9 +119,7 @@ body {
     }
 
     .hero-right {
-        position: relative;
-        width: auto;
-        right: 200px;
+        width: 40dvw;
 
         .hero-heading {
             font-family: "Trebuchet MS", sans-serif;
@@ -243,17 +243,20 @@ body {
     display: flex;
     justify-content: center;
 
-    .atxt-left,
-    .atxt-right {
-        font-family: "M PLUS Rounded 1c", serif;
-        background-color: #4021325b;
-        color: #f2e8e4;
-        border-radius: 10px;
-        position: relative;
-        height: auto;
-        width: clamp(500px, 50vh, 600px);
-        padding: 50px;
-        box-shadow: 0 0 5px 1px #f2e8e4;
+    .asub-text {
+        .atxt-left,
+        .atxt-right {
+            font-family: "M PLUS Rounded 1c", serif;
+            background-color: #4021325b;
+            color: #f2e8e4;
+            border-radius: 10px;
+            position: relative;
+            height: 40dvh;
+            width: clamp(500px, 50vh, 600px);
+            box-shadow: 0 0 5px 1px #f2e8e4;
+            padding: 25px;
+            margin: -25px;
+        }
     }
     .atxt-left {
         animation-name: pan-left;

@@ -243,30 +243,26 @@ body {
     display: flex;
     justify-content: center;
 
-    .asub-text {
-        .atxt-left,
-        .atxt-right {
-            font-family: "M PLUS Rounded 1c", serif;
-            background-color: #4021325b;
-            color: #f2e8e4;
-            border-radius: 10px;
-            position: relative;
-            height: 40dvh;
-            width: clamp(500px, 50vh, 600px);
-            box-shadow: 0 0 5px 1px #f2e8e4;
-            padding: 25px;
-            margin: -25px;
-        }
+    .atxt-left,
+    .atxt-right {
+        font-family: "M PLUS Rounded 1c", serif;
+        background-color: #4021325b;
+        color: #f2e8e4;
+        border-radius: 10px;
+        position: relative;
+        height: 40dvh;
+        width: clamp(300px, 300px, 300px);
+        box-shadow: 0 0 5px 1px #f2e8e4;
+        padding:30px;
     }
+
     .atxt-left {
         animation-name: pan-left;
-        animation-duration: ease-in-out;
         animation-duration: 1ms;
         animation-timeline: scroll();
     }
     .atxt-right {
         animation-name: pan-right;
-        animation-duration: ease-in-out;
         animation-duration: 1ms;
         animation-timeline: scroll();
     }

@@ -51,18 +51,10 @@ body {
             padding: 25px 15px;
             border-radius: 5px;
         }
-        a:hover {
-            text-decoration: none;
-            background-color: #f2e8e4;
-            color: #73306e;
-            padding: 25px 15px;
-            border-radius: 5px;
-        }
         .hire-me {
             background-color: #73306e;
             color: #f2e8e4;
         }
-
         .hire-me:hover {
             background-color: #f2e8e4;
             color: #402132;
@@ -90,36 +82,44 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 91vh;
+    height: 90dvh;
+    z-index: 2;
 
+    .hero-left,
+    .hero-right {
+        top: 1dvh;
+    }
     .hero-left {
         position: relative;
+
         .hero-picture {
-            width: 400px;
+            max-width: 400px;
+            padding: 35px;
         }
 
         .small-logo {
             position: absolute;
-            top: -35px;
-            width: 70px;
-            left: -30px;
+            max-width: 70px;
+            top: 0px;
+            left: 0px;
             border-radius: 10px;
         }
 
         .small-logo {
             animation-name: rotateAnimation;
-            animation-duration: 1ms;
+            animation-duration: 5s;
             animation-timing-function: ease-out;
             animation-timeline: scroll(block nearest);
         }
     }
 
     .hero-right {
-        width: 40dvw;
+        position: relative;
+        width: auto;
 
         .hero-heading {
             font-family: "Trebuchet MS", sans-serif;
-            font-size: 70px;
+            font-size: max(6vw, 50px);
 
             span {
                 color: #73306e;
@@ -129,7 +129,7 @@ body {
         .hero-sub-heading,
         .small-text {
             font-family: "Trebuchet MS", sans-serif;
-            font-size: 17px;
+            font-size: max(1vw, 12px);
             padding: 20px 0;
         }
 
@@ -140,8 +140,10 @@ body {
 
             .resume-btn,
             .contact-btn {
+                text-decoration: none;
                 border-radius: 5px;
-                padding: 20px 60px;
+                padding: max(2vw, 10px) max(5vw, 40px);
+                font-size: 20px;
             }
 
             .resume-btn {
@@ -150,12 +152,24 @@ body {
                 border-color: #f2e8e4;
                 color: #f2e8e4;
             }
+            .resume-btn:hover {
+                font-family: "Trebuchet MS", sans-serif;
+                background-color: #f2e8e4;
+                border-color: #73306e;
+                color: #73306e;
+                box-shadow: 0 0 25px 5px rgba(115, 48, 111, 0.75);
+                transition: 0.3;
+            }
 
             .contact-btn {
                 font-family: "Trebuchet MS", sans-serif;
                 background-color: #f2e8e4;
                 border-color: #73306e;
                 color: #73306e;
+            }
+            .contact-btn:hover {
+                box-shadow: 0 0 25px 5px rgba(115, 48, 111, 0.75);
+                transition: 0.3;
             }
         }
 
@@ -169,6 +183,9 @@ body {
     0% {
         background-position: 0 -200px;
     }
+    50% {
+        background-position: 0 -900px;
+    }
     100% {
         background-position: 0 -1300px;
     }
@@ -177,31 +194,33 @@ body {
     0% {
         left: -100%;
     }
+    75% {
+        left: 15px;
+    }
     100% {
-        left: 0px;
+        left: 15px;
     }
 }
-@keyframes pan-right {
-    0% {
-        left: -200%;
-    }
-    100% {
-        left: 0px;
-    }
+
+.about-scroll {
+    position: relative;
+    height: 50px;
 }
 
 .about-container {
     display: flex;
-    height: 91dvh;
+    height: 100dvh;
+    position: relative;
+
     /* * {
         box-shadow: 0px 0px 0px 1px rgb(60, 255, 0) inset;
     } */
-
     .about-bg {
         background-image: url("images/about-me-bg.jpg");
         background-size: cover;
+        background-repeat: no-repeat;
         position: absolute;
-        height: 91vh;
+        height: 100dvh;
         width: 100%;
     }
 
@@ -213,41 +232,38 @@ body {
     }
 
     .overlay {
-        background-color: hsla(304, 41%, 32%, 0.333);
+        background-color: hsla(305, 55%, 14%, 0.548);
         position: absolute;
-        height: 91dvh;
+        height: 100%;
         width: 100%;
     }
     .about-me {
         z-index: 1;
     }
     .about-heading {
-        animation-name: pan;
         font-family: "M PLUS Rounded 1c", serif;
         text-align: center;
-        font-size: 70px;
+        font-size: max(6vw, 50px);
         color: white;
         padding: 25px;
     }
     .asub-text {
         display: flex;
-        margin-top: px;
+        flex-direction: row;
         font-size: 20px;
-        gap: 100px;
     }
 
     display: flex;
     justify-content: center;
 
-    .atxt-left,
-    .atxt-right {
+    .atxt-left {
         font-family: "M PLUS Rounded 1c", serif;
         background-color: #4021325b;
         color: #f2e8e4;
         border-radius: 10px;
         position: relative;
-        height: 40dvh;
-        width: clamp(300px, 300px, 300px);
+        max-width: clamp(300px, 500px, 500px);
+        max-height: max;
         box-shadow: 0 0 5px 1px #f2e8e4;
         padding: 30px;
     }
@@ -257,9 +273,65 @@ body {
         animation-duration: 1ms;
         animation-timeline: scroll();
     }
-    .atxt-right {
-        animation-name: pan-right;
-        animation-duration: 1ms;
-        animation-timeline: scroll();
+}
+
+.footer {
+    box-shadow: 0 0 10px rgba(115, 48, 111, 0.75);
+    bottom: -55px;
+    z-index: 2;
+    position: sticky;
+    background: #402132;
+    color: #f2e8e4;
+    text-align: center;
+}
+.footer-container {
+    background-color: #402132;
+    color: #f2e8e4;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    padding: 5px;
+    .phone,
+    .mail {
+        font-size: 1rem;
     }
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #f2e8e4;
+    align-items: center;
+    padding-top: 5px;
+    gap: 15px;
+}
+.f-text {
+    padding: 3px 0 10px 0;
+    font-size: 14px;
+    text-align: right;
+}
+
+.f-icon {
+    display: flex;
+    text-decoration: none;
+    color: #f2e8e4;
+    font-size: 1.5rem;
+    gap: 10px;
+    a {
+        color: #f2e8e4;
+    }
+}
+
+.burger-menu,
+.sub-buttons {
+    display: none;
 }
